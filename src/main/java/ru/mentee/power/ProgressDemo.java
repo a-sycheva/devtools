@@ -20,5 +20,7 @@ public class ProgressDemo {
             System.out.println("Status: backlog first");
         }
 
+        System.out.println("Текущая ветка это feature/DVT-3");
+
     }
 }
