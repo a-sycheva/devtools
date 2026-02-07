@@ -14,6 +14,13 @@ public class MenteeProgressTest {
     }
 
     @Test
+    void shouldDetectReadiness_whenHoursAboveThreshold() {
+        MenteeProgress progress = new MenteeProgress("Anastasiya", 1, 4);
+
+        assertThat(progress.readyForSprint()).isTrue();
+    }
+
+    @Test
     void shouldDetectLackOfReadiness_whenHoursBelowThreshold(){
         MenteeProgress progress = new MenteeProgress("Anastasiya", 2, 2);
         assertThat(progress.readyForSprint()).isFalse();
