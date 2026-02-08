@@ -1,9 +1,11 @@
-
 # Gradle Wrapper
 .gradle/
 build/
 !gradle/wrapper/gradle-wrapper.jar
 !gradle/wrapper/gradle-wrapper.properties
+!**/src/main/**/build/
+!**/src/test/**/build/
+.kotlin
 
 # IntelliJ IDEA
 .idea/
@@ -13,21 +15,6 @@ out/
 # OS
 .DS_Store
 Thumbs.db
-
-.gradle
-!**/src/main/**/build/
-!**/src/test/**/build/
-.kotlin
-
-### IntelliJ IDEA ###
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
-.idea/libraries/
-*.iws
-*.ipr
-!**/src/main/**/out/
-!**/src/test/**/out/
 
 ### Eclipse ###
 .apt_generated
