@@ -104,7 +104,7 @@ https://mentee-power.xl.ru/learn/MCIneBj4KkyH-GIRCspFvA/theory
 
 ---
 
-## Сценарий ручной проверки DVT-6
+## 🧪 Сценарий ручной проверки DVT-6
 
 ### Запуск приложения
 <pre>
@@ -148,3 +148,123 @@ https://mentee-power.xl.ru/learn/MCIneBj4KkyH-GIRCspFvA/theory
 - Если тесты красные: откройте вывод теста, найдите AssertionError, скорректируйте метод
 - Если Debug не останавливается: убедитесь, что breakpoint установлен (красный кружок)
 </pre>
+
+---
+
+## 📏 Кодстайл-гайд проекта devtools
+
+<pre>
+Проект следует правилам Google Java Style Guide с адаптацией.
+Автоматическая проверка: ./gradlew checkstyleMain
+</pre>
+
+---
+
+
+### Именование полей: camelCase
+
+<pre>
+До:   private List<String> city_list;
+После: private List<String> cityList;
+Почему: Java Convention требует camelCase для полей.
+Источник: https://google.github.io/styleguide/javaguide.html#s5.3-camel-case
+</pre>
+
+---
+
+
+### Именование переменных: camelCase
+
+<pre>
+До:   int wrong_var_name = x;
+После: int wrongVarName = x;
+Почему: Java Convention требует camelCase для переменных.
+Источник: https://google.github.io/styleguide/javaguide.html#s5.3-camel-case
+</pre>
+
+---
+
+
+### Именование методов: camelCase
+<pre>
+До:   
+public List<Student> get_students_from_specific_city(String city) {
+После:
+public List<Student> getStudentsFromSpecificCity(String city) {
+Почему: Java Convention требует camelCase для методов.
+Источник: https://google.github.io/styleguide/javaguide.html#s5.3-camel-case
+</pre>
+
+---
+
+
+### Порядок импорта
+
+<pre>
+До:
+import java.util.List;  
+import java.util.ArrayList;
+После:
+import java.util.ArrayList;
+import java.util.List;
+Почему:Java Convention требует располагать импортированные имена в порядке сортировки ASCII, который упрощает поиск импортов.
+Источник: https://google.github.io/styleguide/javaguide.html#s3.3-import-statements
+</pre>
+
+---
+
+
+### Лишняя строка перед // (более 1)
+
+<pre>
+До:
+import java.util.List;
+
+
+// нарушение: лишняя пустая строка
+После:
+import java.util.List;
+
+// нарушение: лишняя пустая строка
+Почему: Java Convention несколько подряд идущих пустых строк допускаются, но никогда не являются обязательными (и не поощряются). Наличие лишних пустых строк может ухудшат читаемость кода при code review, а также увеличивает вертикальный размер кода.
+Источник: https://google.github.io/styleguide/javaguide.html#s4.6-whitespace
+</pre>
+
+---
+
+
+### if без {}
+
+<pre>
+До:   
+if (student != null)
+studentList.add(student);
+После:
+if (student != null)
+{
+studentList.add(student);
+}
+Почему: Java Convention требует, чтобы Фигурные скобки соответствовали стилю Кернигана и Ритчи для непустых блоков и блокоподобных конструкций, что улучшает читаемость кода, создает единообразие. Проще понимать логические блоки.
+Источник: https://google.github.io/styleguide/javaguide.html#s4.1-braces
+
+</pre>
+
+---
+
+
+### Длинна строки больше 100
+
+<pre>
+До:   
+public void i_just_want_to_have_method_with_very_long_method_name_that_exceeds_one_hundred_twenty_characters_and_with_problem_in_it() {
+После:
+public void method_with_problem_in_it()
+Почему: Длинные строки затрудняют чтение в редакторе и при code review. Java Convention регламентирует длинну строки не более 100 символов (с возможностью переноса на другую строку в указанных в разделе Line-wrapping случаях)
+Источник: https://google.github.io/styleguide/javaguide.html#s5-naming
+</pre>
+
+
+
+
+
+
