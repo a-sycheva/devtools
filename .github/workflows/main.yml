@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - master
-      - 'feature\**'
+      - 'feature/**'
   pull_request:
     branches:
       - master
@@ -22,21 +22,21 @@ jobs:
     - name: install java v4 (JDK 25)
       uses: actions/setup-java@v4
       with:
-        distribution: 'timurin'
+        distribution: 'temurin'
         java-version: '25'
         cache: 'gradle'
     
     - name: perform Checkstyle
-      run: .gradlew/ --no-daemon checkstyleMain checkstyleTest
+      run: ./gradlew --no-daemon checkstyleMain checkstyleTest
   
     - name: perform
-      run: .gradlew/ --no-daemon test
+      run: ./gradlew/ --no-daemon test
 
     - name: create JaCoCo test report
-      run: .gradlew/ --no-daemon JaCoCoTestReport
+      run: .gradlew/ --no-daemon JacocoTestReport
 
-    - name: check test coverage treshold
-      run: .gradlew/ --no-daemon JaCoCoCoverageVerification
+    - name: check test coverage threshold
+      run: .gradlew/ --no-daemon JacocoCoverageVerification
 
     - name: build the project
       run: .gradlew/ --no-daemon build
