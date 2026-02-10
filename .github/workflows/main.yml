@@ -30,15 +30,15 @@ jobs:
       run: ./gradlew --no-daemon checkstyleMain checkstyleTest
   
     - name: perform
-      run: ./gradlew/ --no-daemon test
+      run: ./gradlew --no-daemon test
 
     - name: create JaCoCo test report
-      run: .gradlew/ --no-daemon JacocoTestReport
+      run: ./gradlew --no-daemon JacocoTestReport
 
     - name: check test coverage threshold
-      run: .gradlew/ --no-daemon JacocoCoverageVerification
+      run: ./gradlew --no-daemon JacocoCoverageVerification
 
     - name: build the project
-      run: .gradlew/ --no-daemon build
+      run: ./gradlew --no-daemon build
 
 
