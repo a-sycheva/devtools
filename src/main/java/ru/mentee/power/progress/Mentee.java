@@ -1,0 +1,19 @@
+package ru.mentee.power.progress;
+
+public record Mentee(
+    String name,
+    String city,
+    String goal,
+    int completedLessons,
+    int totalLessons
+) {
+  public Mentee {
+
+    //на случай неверно введенных целочисленных данных
+    if (completedLessons < 0 || totalLessons <= 0 || completedLessons > totalLessons) {
+      throw new IllegalArgumentException("Incorrect progress value");
+    }
+  }
+
+
+}
