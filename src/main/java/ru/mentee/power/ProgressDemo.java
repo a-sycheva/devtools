@@ -1,13 +1,8 @@
 package ru.mentee.power;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class ProgressDemo {
   static void main() {
 
-    // напиши new MenteeProgress( "Имя студента", 1, 6)  затем выдели
-    // и набери Ctrl + Alt + V
-    // выделяет выражение в переменную.
     MenteeProgress progress = new MenteeProgress(
         "Anastasiya", // возьми значение из своего плана DVT-0
         2,               // номер спринта

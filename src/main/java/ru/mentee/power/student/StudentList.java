@@ -14,8 +14,12 @@ public class StudentList {
     studentList = new ArrayList<>();
   }
 
-  public List<Student> getStudentList(){
-    return this.studentList;
+  public List<Student> getStudentList() {
+    return new ArrayList<Student>(this.studentList);
+  }
+
+  public int  size() {
+    return this.studentList.size();
   }
 
   public void addStudent(Student student) {
@@ -32,6 +36,7 @@ public class StudentList {
   static void main() {
 
     StudentList studentList = new StudentList();
+
     studentList.addStudent(new Student("Anastasiya", "Moscow"));
     studentList.addStudent(new Student("Olga", "Kirov"));
     studentList.addStudent(new Student("Kolya", "Moscow"));

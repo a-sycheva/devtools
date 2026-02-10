@@ -25,10 +25,10 @@ class StudentListTest {
   @DisplayName("Should not add student when null")
   void shouldNotAddStudentWhenNotNull() {
     StudentList studentList = new StudentList();
-    int size1 = studentList.getStudentList().size();
+    int sizeBefore = studentList.size();
     studentList.addStudent(null);
 
-    assertThat(size1).isEqualTo(studentList.getStudentList().size());
+    assertThat(sizeBefore).isEqualTo(studentList.size());
   }
 
   @Test
@@ -72,6 +72,15 @@ class StudentListTest {
     List<Student> studentsFromNowhere = studentList.getStudentsFromSpecificCity("");
 
     assertThat(studentsFromNowhere).doesNotContain(fromOmsk).doesNotContain(fromKislovodsk);
+
+  }
+
+  @Test
+  @DisplayName("Should not throw exception when list is empty")
+  void shouldThrowExceptionWhenListIsEmpty() {
+    StudentList studentList = new StudentList();
+
+    assertThatCode(() -> studentList.getStudentList()).doesNotThrowAnyException();
 
   }
 }
