@@ -32,8 +32,6 @@ public class ProgressTracker {
   public static void main(String[] args) {
     ProgressTracker tracker = new ProgressTracker();
 
-    //массив mentee
-
     Mentee[] mentees = {
         new Mentee("Alisa", "Kaliningrad", "Backend development", 7, 12),
         new Mentee("Kolya", "Rybinsk", "Java BAckend", 4, 12),

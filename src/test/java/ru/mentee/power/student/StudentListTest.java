@@ -83,4 +83,11 @@ class StudentListTest {
     assertThatCode(() -> studentList.getStudentList()).doesNotThrowAnyException();
 
   }
+
+  @Test
+  @DisplayName("Main should execute correct")
+  void shouldExecuteCorrect () {
+
+    assertThatCode(StudentList::main).doesNotThrowAnyException();
+  }
 }

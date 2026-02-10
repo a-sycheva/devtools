@@ -2,6 +2,9 @@ package ru.mentee.power.progress;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -49,5 +52,22 @@ class ProgressTrackerTest {
     ProgressTracker progress = new ProgressTracker();
 
     assertThat(progress.calculateTotalProgress(mentees)).contains("Mentees list is empty!");
+  }
+
+  @Test
+  @DisplayName("Main should execute correct")
+  void shouldExecuteCorrect () {
+
+    ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+    PrintStream originalOut = System.out;
+    System.setOut(new PrintStream(outContent));
+
+    ProgressTracker.main(new String[]{});
+
+    String output = outContent.toString();
+
+    assertThat(output).isNotEmpty();
+
+    assertThat(output).contains("Summary: completed");
   }
 }
