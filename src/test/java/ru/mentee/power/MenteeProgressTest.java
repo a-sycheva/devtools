@@ -20,7 +20,7 @@ public class MenteeProgressTest {
   }
 
   @Test
-  void shouldReturnTrueIfPlannedHoursMoreThanThree() {
+  void ShouldReturnTrueIfPlannedHoursMoreThanThree() {
     MenteeProgress menteeProgress = new MenteeProgress("Andrey", 2, 5);
 
     assertThat(menteeProgress.readyForSprint()).isTrue();
