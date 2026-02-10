@@ -1,3 +1,7 @@
+
+# DevTools Project
+[![Java CI with Jacoco and Checkstyle](https://github.com/a-sycheva/devtools/actions/workflows/ci.yml/badge.svg)](https://github.com/a-sycheva/devtools/actions/workflows/ci.yml)
+
 ## 🔁 Git: локальный цикл работы
 
 <pre>
