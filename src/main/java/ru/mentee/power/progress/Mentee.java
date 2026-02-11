@@ -1,5 +1,7 @@
 package ru.mentee.power.progress;
 
+import java.util.List;
+
 public record Mentee(
     String name,
     String city,
@@ -9,11 +11,8 @@ public record Mentee(
 ) {
   public Mentee {
 
-    //на случай неверно введенных целочисленных данных
     if (completedLessons < 0 || totalLessons <= 0 || completedLessons > totalLessons) {
       throw new IllegalArgumentException("Incorrect progress value");
     }
   }
-
-
 }
