@@ -1,7 +1,5 @@
 package ru.mentee.power.student;
 
-//нарушение: порядок импортов
-
 import java.util.ArrayList;
 import java.util.List;
 

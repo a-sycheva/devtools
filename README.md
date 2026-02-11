@@ -1,6 +1,6 @@
 
 # DevTools Project
-[![Java CI with Jacoco and Checkstyle](https://github.com/a-sycheva/devtools/actions/workflows/ci.yml/badge.svg?branch=feature%2FDVT-8)](https://github.com/a-sycheva/devtools/actions/workflows/ci.yml?query=branch%3Afeature%2FDVT-8)
+[![Java CI with Jacoco and Checkstyle](https://github.com/a-sycheva/devtools/actions/workflows/ci.yml/badge.svg)](https://github.com/a-sycheva/devtools/actions/workflows/ci.yml)
 
 ## 🔁 Git: локальный цикл работы
 
