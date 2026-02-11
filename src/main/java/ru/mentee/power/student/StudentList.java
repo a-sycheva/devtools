@@ -8,8 +8,6 @@ import java.util.List;
 public class StudentList {
   private List<Student> studentList;
 
-  private List<String> cityList;
-
   public StudentList() {
     studentList = new ArrayList<>();
   }

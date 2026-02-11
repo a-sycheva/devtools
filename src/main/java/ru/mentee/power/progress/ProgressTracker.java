@@ -1,12 +1,6 @@
 package ru.mentee.power.progress;
 
 public class ProgressTracker {
-  /**
-   * Вычисляет суммарный прогресс группы mentee.
-   *
-   * @param mentees массив mentee
-   * @return строка с информацией о суммарном прогрессе (пройдено/осталось уроков)
-   */
 
   public String calculateTotalProgress(Mentee[] mentees) {
 
