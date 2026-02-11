@@ -21,6 +21,7 @@ class ProgressDemoTest {
     ProgressDemo.main();
 
     String output = outContent.toString();
+    System.setOut(originalOut);
 
     assertThat(output).isNotEmpty();
 

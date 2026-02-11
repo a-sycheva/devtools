@@ -1,7 +1,5 @@
 package ru.mentee.power.progress;
 
-import java.util.List;
-
 public record Mentee(
     String name,
     String city,
