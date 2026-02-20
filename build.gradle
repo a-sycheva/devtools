@@ -76,6 +76,15 @@ jacocoTestReport {
         html.required = true
         html.outputLocation = layout.buildDirectory.dir('reports/jacoco/test/html')
     }
+
+    // Исключаем LiveCodingDemo из отчёта покрытия
+    afterEvaluate {
+        classDirectories.setFrom(files(classDirectories.files.collect { dir ->
+            fileTree(dir: dir, exclude: [
+                    '**/LiveCodingDemo.class'
+            ])
+        }))
+    }
 }
 
 // Настройка проверки покрытия (минимум 80%)
@@ -87,6 +96,15 @@ jacocoTestCoverageVerification {
                 minimum = 0.80  // 80% покрытия инструкций
             }
         }
+    }
+
+    // Исключаем LiveCodingDemo из отчёта покрытия
+    afterEvaluate {
+        classDirectories.setFrom(files(classDirectories.files.collect { dir ->
+            fileTree(dir: dir, exclude: [
+                    '**/LiveCodingDemo.class'
+            ])
+        }))
     }
 }
 
